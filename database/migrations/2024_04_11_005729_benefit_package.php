@@ -11,16 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('benefit_package', function (Blueprint $table) {
             $table->id();
-            $table->string('firstname', 155);
-            $table->string('lastname', 155);
-            $table->char('phone', 9)->nullable();
-            $table->string('email')->unique();
-            $table->string('password', 255);
-            $table->rememberToken();
+            $table->foreignId('benefit_id')->constrained('benefits');
+            $table->foreignId('package_id')->constrained('packages');
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
@@ -29,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('benefit_package');
     }
 };
