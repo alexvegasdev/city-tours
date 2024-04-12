@@ -13,10 +13,13 @@
 
             <label for="password">Password</label>
             <input required class="input" type="password" name="password" id="password">
-
             <div class="error-message">Fields is invalid</div>
 
             <input class="button" type="submit" value="Login">
+
+            <p>
+                  Don't have an account? <a href="{{ route('register.store') }}">Register</a>
+            </p>
         </form>
     </div>
 @endsection

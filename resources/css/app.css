@@ -11,6 +11,7 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
@@ -32,7 +33,11 @@ body {
     display: flex;
     flex-direction: column;
     width: 400px;
-    height: 450px;
+    height: 500px;
+}
+
+.register {
+    height: 720px;
 }
 
 .form h1 {
@@ -63,6 +68,8 @@ body {
     letter-spacing: 1px;
     margin: 20px 0px;
     border-radius: 12px;
+    outline: none;
+    border: none;
 }
 
 .button:hover {
@@ -73,4 +80,12 @@ body {
 .error-message {
     color: #ee4242;
     margin: 10px 0px;
+}
+
+p {
+    margin: auto;
+}
+
+a {
+    color: var(--primary-color);
 }
