@@ -1,19 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Login</title>
-</head>
-<body>
-      <form action="/login" method="POST">
+@extends('partials.head')
+
+@section('content')
+    <div class="container-form">
+        <form action="{{ route('login.store') }}" method="POST" class="form">
             @csrf
-            email
-            <input type="email" name="email">
-            password
-            <input type="password" name="password">
-            <input type="submit" value="Login">
-      </form>
-</body>
-</html>
+            <h1>
+                  Login
+            </h1>
+
+            <label for="email">Email</label>
+            <input required class="input" type="email" name="email" id="email">
+
+            <label for="password">Password</label>
+            <input required class="input" type="password" name="password" id="password">
+
+            <div class="error-message">Fields is invalid</div>
+
+            <input class="button" type="submit" value="Login">
+        </form>
+    </div>
+@endsection
