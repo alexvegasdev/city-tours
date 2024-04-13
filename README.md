@@ -1,4 +1,4 @@
-<div align="center">
+<div align="center" padding="20px">
     <h1>CITY TOURS</h1>
 </div>
 
