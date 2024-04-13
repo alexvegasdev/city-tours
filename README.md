@@ -15,10 +15,10 @@ Mockups:
 <table align="left" >
     <tr border="none">
         <td width="25%" align="center">
-            <img align="center" width=100% src="" alt="Picture01" /></a>  
+            <img align="center" width=100% src="https://raw.githubusercontent.com/alexvegasdev/city-tours/%23images/public/images/Main.png" alt="Picture01" /></a>  
         </td>
         <td width="25%" align="center">
-            <img align="center" width=100% src="" alt="Picture01" /></a>     
+            <img align="center" width=100% src="https://raw.githubusercontent.com/alexvegasdev/city-tours/%23images/public/images/Categories.png" alt="Picture01" /></a>     
         </td>
     </tr>
 </table>
