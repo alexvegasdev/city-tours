@@ -1,5 +1,5 @@
 <div align="center">
-# CITY TOURS
+    <h1>CITY TOURS</h1>
 </div>
 
 This is a web application designed to promote tourist packages:
