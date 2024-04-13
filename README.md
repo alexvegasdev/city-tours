@@ -11,7 +11,7 @@
 
 This is a web application designed to promote tourist packages:
 
-Mockups:
+## Mockups:
 <table align="left" >
     <tr border="none">
         <td width="25%" align="center">
