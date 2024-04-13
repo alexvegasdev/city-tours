@@ -7,9 +7,21 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## CITY TOURS
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This is a web application designed to promote tourist packages:
+
+Mockups:
+<table align="left" >
+    <tr border="none">
+        <td width="25%" align="center">
+            <img align="center" width=100% src="" alt="Picture01" /></a>  
+        </td>
+        <td width="25%" align="center">
+            <img align="center" width=100% src="" alt="Picture01" /></a>     
+        </td>
+    </tr>
+</table>
 
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
 - [Powerful dependency injection container](https://laravel.com/docs/container).
