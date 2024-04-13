@@ -1,5 +1,5 @@
 <p align="center">
-    # CITY TOURS
+# CITY TOURS
 </p>
 
 This is a web application designed to promote tourist packages:
