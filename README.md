@@ -1,6 +1,6 @@
-<p align="center">
+<div align="center">
 # CITY TOURS
-</p>
+</div>
 
 This is a web application designed to promote tourist packages:
 
