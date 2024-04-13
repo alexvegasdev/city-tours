@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## CITY TOURS
+### CITY TOURS
 
 This is a web application designed to promote tourist packages:
 
