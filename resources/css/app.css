@@ -33,11 +33,11 @@ body {
     display: flex;
     flex-direction: column;
     width: 400px;
-    height: 500px;
+    min-height: 500px;
 }
 
 .register {
-    height: 720px;
+    min-height: 720px;
 }
 
 .form h1 {
@@ -56,7 +56,7 @@ body {
     outline: none;
     border: none;
     border-bottom: 2px solid var(--primary-color);
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 6px 0px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -79,7 +79,8 @@ body {
 
 .error-message {
     color: #ee4242;
-    margin: 10px 0px;
+    margin: 6px 0px;
+    font-size: 14px;
 }
 
 p {
