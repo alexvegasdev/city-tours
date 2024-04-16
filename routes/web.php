@@ -22,7 +22,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/home', [HomeController::class, 'index']);
+Route::get('/home', [HomeController::class, 'index'])->name('homepage');
 
 Route::group([
     'middleware' => 'guest'
