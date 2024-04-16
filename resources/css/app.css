@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Junge&display=swap');
 
 :root {
-    --primary-color: #404947; 
+    --primary-color: #404947;
     --secondary-color: #63696C;
     --tertiary-color: #FFFF;
 }
@@ -16,6 +16,57 @@
 
 body {
     background-color: #E6E6E6;
+}
+
+.header-fixed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: var(--tertiary-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.nav-bar {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo svg {
+    margin-right: 10px;
+} 
+
+.nav-logo span {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.nav-redirects a {
+    margin-left: 14px;
+    display: inline-block;
+}
+
+.nav-redirects a:after {
+    content: "";
+    display: block;
+    margin: auto;
+    height: 1.5px;
+    width: 0px;
+    transition: all .3s;
+}
+
+.nav-redirects a:hover:after {
+    width: 100%;
+    background: var(--primary-color);
 }
 
 .container-form {
@@ -88,4 +139,19 @@ p {
 
 a {
     color: var(--primary-color);
+}
+
+@media (max-width: 650px) {
+    .nav-bar {
+        flex-direction: column;
+    }
+
+    .nav-logo {
+        margin: 10px 0px 20px 0px;
+    }
+
+    .header-fixed {
+        padding: 10px 0px;
+        height: auto;
+    }
 }
