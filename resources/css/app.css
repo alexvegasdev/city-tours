@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Junge&display=swap');
 
+/* Variables */
 :root {
     --primary-color: #404947;
     --secondary-color: #63696C;
@@ -18,6 +19,7 @@ body {
     background-color: #E6E6E6;
 }
 
+/* navbar */
 .header-fixed {
     display: flex;
     justify-content: center;
@@ -75,7 +77,8 @@ body {
     margin: auto;
 }
 
-.container-form {
+/* Login and Register */
+.cn-form {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -93,7 +96,7 @@ body {
     min-height: 500px;
 }
 
-.register {
+.register-height {
     min-height: 720px;
 }
 
@@ -117,7 +120,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.button {
+.btn {
     background-color: var(--primary-color);
     padding: 14px;
     color: var(--tertiary-color);
@@ -129,7 +132,7 @@ body {
     border: none;
 }
 
-.button:hover {
+.btn:hover {
     background-color: var(--secondary-color);
     cursor: pointer;
 }
@@ -148,6 +151,7 @@ a {
     color: var(--primary-color);
 }
 
+/* homepage */
 .cn-main {
     margin-top: 60px;
     height: calc(100vh - 60px);
@@ -191,13 +195,71 @@ h1 {
 }
 
 .cn-social a svg {
-    height: 100%;
-}
-
-a svg {
     margin-right: 5px;
 }
 
+/* Section categories */
+.cn-categories {
+    padding-top: 60px;
+    height: 100vh;
+}
+
+.sub-title {
+    font-size: 38px;
+    text-align: center;
+    margin: 30px 0px 60px 0px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.grid-categories {
+    display: grid;
+    width: 80%;
+    max-width: 1000px;
+    height: 70%;
+    margin: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.category {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--tertiary-color);
+    border-radius: 12px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.category:hover {
+    transform: scale(1.01);
+}
+
+.category h3 {
+    font-size: 26px;
+    font-weight: 300;
+}
+
+.category-1 {
+    grid-column: 1 / 3;
+}
+
+.category-2 {
+    grid-column: 3 / 5;
+}
+
+.category-5 {
+    grid-column: 3 / 5;
+}
+
+
+
+/* Responsive */
 @media (max-width: 650px) {
     .nav-bar {
         flex-direction: column;

@@ -1,7 +1,7 @@
 @extends('partials.head')
 
 @section('content')
-    <div class="container-form">
+    <div class="cn-form">
         <form action="{{ route('login.store') }}" method="POST" class="form">
             @csrf
             <h1>
@@ -20,8 +20,7 @@
                 <div class="error-message">{{ $message }}</div>
             @enderror
 
-
-            <input class="button" type="submit" value="Login">
+            <input class="btn" type="submit" value="Login">
             <p>
                 Don't have an account? <a href="{{ route('register.store') }}">Register</a>
             </p>

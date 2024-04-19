@@ -1,8 +1,8 @@
 @extends('partials.head')
 
 @section('content')
-    <div class="container-form">
-        <form action="/register" method="POST" class="form register">
+    <div class="cn-form">
+        <form action="/register" method="POST" class="form register-height">
             @csrf
             <h1>
                 Register
@@ -38,7 +38,7 @@
                 <div class="error-message">{{ $message }}</div>
             @enderror
 
-            <input type="submit" value="Register" class="button">
+            <input type="submit" value="Register" class="btn">
             <p>
                 Do you have an account? <a href="{{ route('login.show') }}">Login</a>
             </p>

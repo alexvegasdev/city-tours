@@ -2,16 +2,17 @@
 
 @section('content')
     <div class="cn">
-        <div class="cn-main">
+        <section class="cn-main">
             <img class="main-image" src="{{ asset('images/main.jpg') }}">
 
             <div class="cn-info">
                 <div class="cn-vision">
                     <h1>CITY TOURS</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id officiis adipisci quibusdam, sed rerum
-                        tempora
-                        iure omnis pariatur modi deleniti cupiditate suscipit, natus quis quasi nihil labore? Labore, dicta
-                        natus.
+                    <p>
+                        Embárcate en un viaje lleno de descubrimientos con nuestras experiencias turísticas guiadas: desde
+                        los monumentos emblemáticos hasta los rincones escondidos, nuestros paquetes turísticos te llevarán
+                        a explorar la auténtica esencia de cada destino, brindándote recuerdos inolvidables en cada paso del
+                        camino
                     </p>
                 </div>
 
@@ -48,6 +49,34 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <section id="categories" class="cn-categories">
+            <h2 class="sub-title">
+                What would you like?
+            </h2>
+            <div class="grid-categories">
+                <div class="category category-1"
+                    style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('{{ asset('images/nature.jpg') }}');">
+                    <h3>Nature</h3>
+                </div>
+                <div class="category category-2"
+                    style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('{{ asset('images/exotic.jpg') }}');">
+                    <h3>Exotic</h3>
+                </div>
+                <div class="category category-3"
+                    style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('{{ asset('images/adrenalin.jpg') }}');">
+                    <h3>Adrenalin</h3>
+                </div>
+                <div class="category category-4"
+                    style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('{{ asset('images/gastronomy.jpg') }}');">
+                    <h3>Gastronomy</h3>
+                </div>
+                <div class="category category-5"
+                    style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('{{ asset('images/culture.jpg') }}');">
+                    <h3>Culture</h3>
+                </div>
+            </div>
+        </section>
     </div>
 @endsection

@@ -24,9 +24,9 @@
             </a>
             <div class="nav-redirects">
                 <a href="{{ route('homepage') }}">Home</a>
-                <a href="#">Categories</a>
-                <a href="#">Packages</a>
-                <a href="#">Places</a>
+                <a href="{{ route('homepage') }}#categories">Categories</a>
+                <a href="{{ route('homepage') }}#packages">Packages</a>
+                <a href="{{ route('homepage') }}#places">Places</a>
                 <a href="{{ route('login.show') }}">Login</a>
             </div>
         </nav>
