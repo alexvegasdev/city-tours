@@ -74,6 +74,7 @@ body {
 
 .cn {
     width: 80%;
+    max-width: 1000px;
     margin: auto;
 }
 
@@ -153,23 +154,25 @@ a {
 
 /* homepage */
 .cn-main {
-    margin-top: 60px;
+    margin: 60px auto 0px auto;
     height: calc(100vh - 60px);
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .main-image {
-    width: 40%;
+    width: 50%;
+    height: 80%;
+    object-fit: cover;
 }
 
 .cn-info {
     background-color: white;
     border-radius: 8px;
     padding: 25px 30px;
-    width: 50%;
+    width: 60%;
     min-width: 500px;
     max-width: 650px;
     min-height: 300px;
@@ -214,7 +217,7 @@ h1 {
 
 .grid-categories {
     display: grid;
-    width: 80%;
+    width: 90%;
     max-width: 1000px;
     height: 70%;
     margin: auto;
