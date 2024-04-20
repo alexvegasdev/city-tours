@@ -1,6 +1,7 @@
 @extends('partials.head')
 
 @section('content')
+    {{ storage_path() }}
     <div class="cn">
         <section class="cn-main">
             <img class="main-image" src="{{ asset('images/main.jpg') }}">
@@ -56,27 +57,38 @@
                 What would you like?
             </h2>
             <div class="grid-categories">
-                <div class="category category-1"
-                    style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('{{ asset('images/nature.jpg') }}');">
-                    <h3>Nature</h3>
-                </div>
-                <div class="category category-2"
-                    style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('{{ asset('images/exotic.jpg') }}');">
-                    <h3>Exotic</h3>
-                </div>
-                <div class="category category-3"
-                    style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('{{ asset('images/adrenalin.jpg') }}');">
-                    <h3>Adrenalin</h3>
-                </div>
-                <div class="category category-4"
-                    style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('{{ asset('images/gastronomy.jpg') }}');">
-                    <h3>Gastronomy</h3>
-                </div>
-                <div class="category category-5"
-                    style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('{{ asset('images/culture.jpg') }}');">
-                    <h3>Culture</h3>
-                </div>
+                @foreach ($categories as $category)
+                    <a class="category {{ 'category-' . $loop->iteration }}" href=""
+                        style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('{{ asset('storage/' . $category->image) }}');">
+                        <h3>{{ $category->name }}</h3>
+                    </a>
+                @endforeach
             </div>
         </section>
+
+        <section class="cn-packages">
+            <h2 class="sub-title">
+                Packages
+            </h2>
+            <div class="grid-packages">
+                
+                @foreach ($packages as $package)
+                    <div>{{ $package->name .' '. $package->price . $package->duration_day . $package->rating . $package->place . $package->benefits}}</div>
+                @endforeach
+            </div>
+        </section>
+
+        <section class="grid-places">
+            <h2 class="sub-title">
+                Places
+            </h2>
+            <div class="grid-packages">
+                
+                @foreach ($places as $place)
+                    <div>{{ $place->name .': '. $place->description }}</div>
+                @endforeach
+            </div>
+        </section>
+
     </div>
 @endsection
