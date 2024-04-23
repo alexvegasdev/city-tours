@@ -25,7 +25,7 @@ class UpdateRequest extends FormRequest
             'firstname' => 'sometimes|string|max:255',
             'lastname' => 'sometimes|string|max:255',
             'phone'=>'sometimes',
-            'email' => 'sometimes|string|email|max:255|unique:users,email'
+            'email' => 'sometimes|string|email|max:255'
             //'password' => 'sometimes|string|min:8',
         ];
     }

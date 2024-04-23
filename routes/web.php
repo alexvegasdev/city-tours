@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\Auth\EditController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\UpdateController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -37,4 +39,7 @@ Route::group([
     'middleware' => 'auth'
 ], static function () {
     Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');
+    Route::get('/user/{user}/edit', [EditController::class, 'show'])->name('user.edit');
+    Route::patch('/user/{user}/edit', [EditController::class, 'update'])->name('user.update');
+    Route::delete('/user/{user}', [EditController::class, 'destroy'])->name('user.destroy');
 });
