@@ -15,6 +15,6 @@ class HomeController extends Controller
         $packages = Package::all();
         $places = Place::all();
         
-        return view('home', compact('categories','packages','places'));
+        return view('home', compact('categories','packages','places'));     
     }
 }
