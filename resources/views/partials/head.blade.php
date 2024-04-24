@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>City Tours</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    @vite(['resources/css/app.css', 'resources/css/footer.css'])
+    @vite(['resources/css/variables.css', 'resources/css/app.css', 'resources/css/forms.css', 'resources/css/footer.css'])
 </head>
 
 <body>

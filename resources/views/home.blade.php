@@ -92,7 +92,7 @@
                                 </p>
                             </div>
                             <div>
-                                <b>Benefits:</b> 
+                                <b>Benefits:</b>
                                 @foreach ($package->benefits as $benefit)
                                     <p>{{ $benefit->title }}</p>
                                 @endforeach
@@ -109,9 +109,13 @@
                 Places
             </h2>
             <div class="grid-places">
-
                 @foreach ($places as $place)
-                    <div>{{ $place->name . ': ' . $place->description }}</div>
+                    <div class="card-place" style="background-image: url('{{ asset('storage/' . $place->pictures->first()->path) }}" alt="{{ $place->name }}');">
+                        <div class="info">
+                            <h3>{{ $place->name }}</h3>
+                            <p>{{ $place->description }}</p>
+                        </div>
+                    </div>
                 @endforeach
             </div>
         </section>
