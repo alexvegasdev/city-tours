@@ -5,6 +5,7 @@
     --primary-color: #404947;
     --secondary-color: #63696C;
     --tertiary-color: #FFFF;
+    --fourth-color: #91999c;
 }
 
 * {
@@ -201,6 +202,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: right;
+    
 }
 
 .cn-social a svg {

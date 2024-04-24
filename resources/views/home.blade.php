@@ -5,7 +5,6 @@
     <div class="cn">
         <section class="cn-main">
             <img class="main-image" src="{{ asset('images/main.jpg') }}">
-
             <div class="cn-info">
                 <div class="cn-vision">
                     <h1>CITY TOURS</h1>
@@ -50,6 +49,8 @@
                     </a>
                 </div>
             </div>
+
+
         </section>
 
         <section id="categories" class="cn-categories">
@@ -66,7 +67,7 @@
             </div>
         </section>
 
-        <section id="packages"class="cn-packages">
+        <section id="packages" class="cn-packages">
             <h2 class="sub-title">
                 Packages
             </h2>
