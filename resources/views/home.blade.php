@@ -66,7 +66,7 @@
             </div>
         </section>
 
-        <section class="cn-packages">
+        <section id="packages"class="cn-packages">
             <h2 class="sub-title">
                 Packages
             </h2>
@@ -94,7 +94,7 @@
                             <div>
                                 <b>Benefits:</b> 
                                 @foreach ($package->benefits as $benefit)
-                                    <p>{{ $benefit->title }}</p>
+                                    <p>✔ {{ $benefit->title }}</p>
                                 @endforeach
                             </div>
                             <span>{{ $package->price }}</span>
@@ -104,7 +104,7 @@
             </div>
         </section>
 
-        <section class="cn-places">
+        <section id="places" class="cn-places">
             <h2 class="sub-title">
                 Places
             </h2>
