@@ -19,6 +19,12 @@ body {
     background-color: #E6E6E6;
 }
 
+.cn-fx-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* navbar */
 .header-fixed {
     display: flex;
@@ -260,9 +266,69 @@ h1 {
     grid-column: 3 / 5;
 }
 
+/* Section packages */
+.grid-packages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
 
+.card-package {
+    background-color: var(--tertiary-color);
+    border-radius: 12px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.card-package:hover {
+    transform: scale(1.02);
+}
+
+.card-package img {
+    width: 100%;
+    border-radius: 12px 12px 0px 0px;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card-package .cn-information {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.card-package .cn-information h3 {
+    font-size: 18px;
+}
+
+.card-package .cn-information .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-package .cn-information .row p {
+    margin: 0px;
+}
+
+.card-package .cn-information div {
+    padding: 6px 0px;
+}
+
+.card-package .cn-information span {
+    font-weight: 700;
+    display: block;
+    font-size: 22px;
+    margin: 10px 0px;
+    text-align: right;
+}
 
 /* Responsive */
+@media (max-width: 900px) {
+    .grid-packages {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 650px) {
     .nav-bar {
         flex-direction: column;
@@ -275,5 +341,11 @@ h1 {
     .header-fixed {
         padding: 10px 0px;
         height: auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .grid-packages {
+        grid-template-columns: repeat(1, 1fr);
     }
 }

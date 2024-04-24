@@ -71,21 +71,47 @@
                 Packages
             </h2>
             <div class="grid-packages">
-                
                 @foreach ($packages as $package)
-                    <div>{{ $package->name .' '. $package->price . $package->duration_day . $package->rating . $package->place . $package->benefits}}</div>
+                    <a class="card-package">
+                        <img src="{{ asset('storage/' . $package->place->pictures->first()->path) }}"
+                            alt="{{ $package->name }}">
+                        <div class="cn-information">
+                            <h3>{{ $package->name }}</h3>
+                            <div class="row">
+                                <p>Duration: {{ $package->duration }} days</p>
+                                <p class="cn-fx-center">
+                                    {{ $package->rating }}
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-star">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
+                                    </svg>
+                                </p>
+                            </div>
+                            <div>
+                                <b>Benefits:</b> 
+                                @foreach ($package->benefits as $benefit)
+                                    <p>{{ $benefit->title }}</p>
+                                @endforeach
+                            </div>
+                            <span>{{ $package->price }}</span>
+                        </div>
+                    </a>
                 @endforeach
             </div>
         </section>
 
-        <section class="grid-places">
+        <section class="cn-places">
             <h2 class="sub-title">
                 Places
             </h2>
-            <div class="grid-packages">
-                
+            <div class="grid-places">
+
                 @foreach ($places as $place)
-                    <div>{{ $place->name .': '. $place->description }}</div>
+                    <div>{{ $place->name . ': ' . $place->description }}</div>
                 @endforeach
             </div>
         </section>
