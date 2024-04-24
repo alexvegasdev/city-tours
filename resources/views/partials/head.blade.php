@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>City Tours</title>
-    @vite(['resources/css/app.css'])
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    @vite(['resources/css/app.css', 'resources/css/footer.css'])
 </head>
 
 <body>
@@ -32,6 +33,21 @@
         </nav>
     </header>
     @yield('content')
+
+
+    <footer class="footer">
+        <div class="footer__container bd-container">
+            <h2 class="footer__title">City Tours</h2>
+            <p class="footer__description">Encuentra tu próximo destino en nuestra plataforma de venta de paquetes turísticos: la aventura te espera.</p>
+
+            <div class="footer__social">
+                <a href="#" class="footer__link"><i class="bx bxl-linkedin"></i></a>
+                <a href="#" class="footer__link"><i class="bx bxl-github"></i></a>
+                <a href="#" class="footer__link"><i class="bx bxl-codepen"></i></a>
+            </div>
+            <p class="footer__copy">&#169; 2024 Jaimes Cayetano - Angela Vegas. Todos los derechos reservados</p>
+        </div>
+    </footer>
 </body>
 
 </html>
