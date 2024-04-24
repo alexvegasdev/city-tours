@@ -31,7 +31,7 @@ class EditController extends Controller
 
     public function destroy(User $user)
     {
-        $user->delete();
+        $user->forceDelete();
         return redirect('/home')->with('success', 'Account deleted successfully');
     }
 
