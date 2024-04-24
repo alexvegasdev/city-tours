@@ -51,10 +51,8 @@
             <p class="footer__description">Encuentra tu próximo destino en nuestra plataforma de venta de paquetes turísticos: la aventura te espera.</p>
 
             <div class="footer__social">
-                <a href="https://www.linkedin.com/" class="footer__link" target="_blank"><i class="bx bxl-linkedin"></i></a>
-                <a href="https://github.com/alexvegasdev" class="footer__link" target="_blank"><i class="bx bxl-github"></i></a>
                 <a href="https://github.com/jaimescayetano" class="footer__link" target="_blank"><i class="bx bxl-github"></i></a>
-                <a href="https://codepen.io/" class="footer__link" target="_blank"><i class="bx bxl-codepen"></i></a>
+                <a href="https://github.com/alexvegasdev" class="footer__link" target="_blank"><i class="bx bxl-github"></i></a>
             </div>
             <p class="footer__copy">&#169; 2024 Jaimes Cayetano - Angela Vegas. Todos los derechos reservados</p>
         </div>
