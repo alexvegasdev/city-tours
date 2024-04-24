@@ -27,7 +27,12 @@
                 <a href="{{ route('homepage') }}#categories">Categories</a>
                 <a href="{{ route('homepage') }}#packages">Packages</a>
                 <a href="{{ route('homepage') }}#places">Places</a>
-                <a href="{{ route('login.show') }}">Login</a>
+                @if(auth()->check()) 
+                    <a href="{{ route('user.edit') }}">Account</a>
+                    <a href="{{ route('logout') }}">Logout</a>
+                @else
+                    <a href="{{ route('login.show') }}">Login</a> 
+                @endif                
             </div>
         </nav>
     </header>

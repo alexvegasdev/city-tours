@@ -8,13 +8,14 @@ use Illuminate\Support\Facades\Auth;
 
 class EditController extends Controller
 {
-    public function show(User $user)
+    public function show()
     {
-        if (Auth::id() !== $user->id) {
-            return redirect('/home')->with('error', 'Unauthorized access');
+        $user = auth()->user();
+        if ($user) {
+            return view('edit', ['user' => $user]);
+        } else {
+            return redirect()->route('login');
         }
-
-        return view('/edit', compact('user'));
     }
 
     public function update(UpdateRequest $request, User $user)
@@ -30,12 +31,7 @@ class EditController extends Controller
 
     public function destroy(User $user)
     {
-        if (Auth::id() !== $user->id) {
-            return redirect('/home')->with('error', 'Unauthorized access');
-        }
-
         $user->delete();
-        Auth::logout();
         return redirect('/home')->with('success', 'Account deleted successfully');
     }
 

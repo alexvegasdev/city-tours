@@ -39,7 +39,7 @@ Route::group([
     'middleware' => 'auth'
 ], static function () {
     Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');
-    Route::get('/user/{user}/edit', [EditController::class, 'show'])->name('user.edit');
-    Route::patch('/user/{user}/edit', [EditController::class, 'update'])->name('user.update');
+    Route::get('/user/edit', [EditController::class, 'show'])->name('user.edit');
+    Route::patch('/user/{user}', [EditController::class, 'update'])->name('user.update');
     Route::delete('/user/{user}', [EditController::class, 'destroy'])->name('user.destroy');
 });
