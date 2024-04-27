@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->char('type');
             $table->string('path', 255);
-            $table->foreignId('place_id')->constrained('places');
+            $table->foreignId('place_id')->constrained('places')->onDelete('cascade');
             $table->timestamps();
         });
     }
