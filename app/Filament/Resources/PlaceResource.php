@@ -36,7 +36,6 @@ class PlaceResource extends Resource
                     ->options(Category::all()->pluck('name', 'id')),
                 TextInput::make('description')
                     ->label('Description')
-                    ->required()
                     ->maxLength(255)
                     ->columnSpan(2),
                 FileUpload::make('pictures')

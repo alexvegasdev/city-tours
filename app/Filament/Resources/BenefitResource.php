@@ -9,9 +9,12 @@ use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Textarea;
 
 class BenefitResource extends Resource
 {
@@ -23,7 +26,12 @@ class BenefitResource extends Resource
     {
         return $form
             ->schema([
-                //
+                TextInput::make('title')
+                    ->required()
+                    ->columnSpan(2),
+                Textarea::make('description')
+                    ->columnSpan(2)
+                    ->rows(3),
             ]);
     }
 
@@ -31,13 +39,19 @@ class BenefitResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('title')
+                    ->searchable()
+                    ->sortable(),
+                TextColumn::make('description')
+                    ->searchable()
+                    ->sortable()
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make()
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

@@ -34,7 +34,6 @@ class CategoryResource extends Resource
                     ->required(),
                 TextInput::make('description')
                     ->label('Description')
-                    ->required()
                     ->maxLength(255),
                 FileUpload::make('image')
                     ->label('Image')
