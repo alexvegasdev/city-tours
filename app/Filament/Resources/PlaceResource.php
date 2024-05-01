@@ -9,6 +9,7 @@ use App\Models\Place;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -34,9 +35,10 @@ class PlaceResource extends Resource
                     ->multiple()
                     ->searchable()
                     ->options(Category::all()->pluck('name', 'id')),
-                TextInput::make('description')
+                Textarea::make('description')
                     ->label('Description')
                     ->maxLength(255)
+                    ->rows(3)
                     ->columnSpan(2),
                 FileUpload::make('pictures')
                     ->label('Pictures')

@@ -31,10 +31,13 @@ class CategoryResource extends Resource
             ->schema([
                 TextInput::make('name')
                     ->label('Name')
-                    ->required(),
-                TextInput::make('description')
+                    ->required()
+                    ->columnSpan(2),
+                Textarea::make('description')
                     ->label('Description')
-                    ->maxLength(255),
+                    ->maxLength(255)
+                    ->columnSpan(2)
+                    ->rows(3),
                 FileUpload::make('image')
                     ->label('Image')
                     ->columnspan(2)
