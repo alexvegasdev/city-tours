@@ -18,6 +18,8 @@ use Filament\Forms\Components\Textarea;
 
 class BenefitResource extends Resource
 {
+    protected static ?int $navigationSort = 1;
+
     protected static ?string $model = Benefit::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';

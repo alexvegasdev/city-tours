@@ -18,12 +18,15 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\ImageColumn;
 
 class PlaceResource extends Resource
 {
+    protected static ?int $navigationSort = 3;
+
     protected static ?string $model = Place::class;
 
-    protected static ?string $navigationIcon = 'heroicon-m-cube';
+    protected static ?string $navigationIcon = 'heroicon-o-building-library';
 
     public static function form(Form $form): Form
     {
@@ -66,7 +69,13 @@ class PlaceResource extends Resource
                 TextColumn::make('categories.name')
                     ->default('Not category')
                     ->sortable()
-                    ->searchable()
+                    ->searchable(),
+                ImageColumn::make('pictures.path')
+                    ->label('Pictures')
+                    ->stacked()
+                    ->limit(3)
+                    ->circular()
+                    ->limitedRemainingText()
             ])
             ->filters([
                 //

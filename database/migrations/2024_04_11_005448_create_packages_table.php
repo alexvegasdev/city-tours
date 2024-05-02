@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('packages', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('description')->nullable();
             $table->decimal('price', 8, 2);
             $table->integer('duration');
             $table->integer('rating');
