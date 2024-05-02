@@ -75,7 +75,7 @@ class PackageResource extends Resource
                 TextColumn::make('name')
                     ->searchable()
                     ->sortable()
-                    ->description(fn (Package $record): string => $record->description === null ? "" : $record->descirption),
+                    ->description(fn (Package $record): string => $record->description == null ? "" : $record->description),
                 TextColumn::make('price')
                     ->searchable()
                     ->sortable(),
