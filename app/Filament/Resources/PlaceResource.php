@@ -31,10 +31,11 @@ class PlaceResource extends Resource
             ->schema([
                 TextInput::make('name')
                     ->required(),
-                Select::make('categories')
+                    Select::make('categories')
                     ->multiple()
                     ->searchable()
-                    ->options(Category::all()->pluck('name', 'id')),
+                    ->relationship('categories', 'name')
+                    ->preload(),
                 Textarea::make('description')
                     ->label('Description')
                     ->maxLength(255)
@@ -67,6 +68,7 @@ class PlaceResource extends Resource
                     ->default('Not category')
                     ->sortable()
                     ->searchable()
+
             ])
             ->filters([
                 //

@@ -15,7 +15,7 @@ class CreatePlace extends CreateRecord
 
     protected function handleRecordCreation(array $data): Model
     {
-        $categories = $data['categories'];
+        $categories = $data['categories'] ?? [];
         $pictures = $data['pictures'];
 
         unset($data['categories']);
