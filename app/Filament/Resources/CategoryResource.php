@@ -21,6 +21,8 @@ use Filament\Tables\Actions\Action;
 
 class CategoryResource extends Resource
 {
+    protected static ?int $navigationSort = 2;
+
     protected static ?string $model = Category::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-group';
