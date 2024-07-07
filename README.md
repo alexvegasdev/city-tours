@@ -32,8 +32,12 @@ composer install
 npm install
 ```
 
-## Execute migrations
+## Generate .env
+```
+cp .env.example .env
+```
 
+## Execute migrations
 ```
 php artisan migrate
 ```

@@ -20,6 +20,8 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Support\Enums\IconPosition;
 use Filament\Tables\Columns\ImageColumn;
+use IbrahimBougaoua\FilamentRatingStar\Actions\RatingStar;
+use IbrahimBougaoua\FilamentRatingStar\Columns\RatingStarColumn;
 
 class PackageResource extends Resource
 {
@@ -42,12 +44,9 @@ class PackageResource extends Resource
                     ->numeric()
                     ->inputMode('decimal')
                     ->required(),
-                TextInput::make('rating')
-                    ->integer()
-                    ->minValue(1)
-                    ->maxValue(5)
-                    ->suffixIcon('heroicon-s-star')
-                    ->required(),
+                RatingStar::make('rating')
+                    ->required()
+                    ->label('Rating'),
                 Textarea::make('description')
                     ->columnSpan(3),
                 TextInput::make('duration')
@@ -84,12 +83,8 @@ class PackageResource extends Resource
                     ->searchable()
                     ->sortable()
                     ->iconPosition(IconPosition::After),
-                TextColumn::make('rating')
-                    ->icon('heroicon-s-star')
-                    ->iconPosition(IconPosition::After)
-                    ->sortable()
-                    ->searchable()
-                    ->color('primary'),
+                RatingStarColumn::make('rating')
+                    ->size('sm'),
                 TextColumn::make('place.name')
                     ->searchable()
                     ->sortable(),
